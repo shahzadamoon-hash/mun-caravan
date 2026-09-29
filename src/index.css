@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-ivory: #F5F1E8;
+  --color-ivory-dark: #EDE9DF;
+  --color-navy: #1B3058;
+  --color-navy-deep: #0F1F3D;
+  --color-charcoal: #2A2A2A;
+  --color-burgundy: #7A1A2E;
+  --color-gold: #A8895A;
+  --color-muted: #8A867C;
+  --color-border: #D4CEBD;
+  --color-border-dark: #B8B0A0;
+
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5F1E8;
+  color: #2A2A2A;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.2;
+  color: #1B3058;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F5F1E8; }
+::-webkit-scrollbar-thumb { background: #D4CEBD; }
+::-webkit-scrollbar-thumb:hover { background: #B8B0A0; }
+
+/* Transition base */
+a, button { transition: all 0.2s ease; }
+
+/* Section rule */
+.rule { border-top: 1px solid #D4CEBD; }
+.rule-dark { border-top: 1px solid #1B3058; }
+
+/* Responsive grids */
+@media (max-width: 768px) {
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns: 3fr 2fr"],
+  [style*="grid-template-columns: 2fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  [style*="grid-template-columns: repeat(4, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  [style*="grid-template-columns: 1fr auto"] {
+    grid-template-columns: 1fr !important;
+  }
+  [style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+  [style*="grid-template-columns: 80px 1fr auto"] {
+    grid-template-columns: 40px 1fr !important;
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.6s ease forwards; }

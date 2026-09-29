@@ -1,0 +1,10 @@
+{
+  "description": "Connect and develop Model United Nations communities through a comprehensive platform that supports conferences, training, and international collaboration.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
